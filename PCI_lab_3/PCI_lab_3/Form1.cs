@@ -18,7 +18,17 @@ namespace PCI_lab_3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hello world!");
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            
         }
     }
 }
