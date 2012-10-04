@@ -19,6 +19,7 @@ namespace PCI_lab_3
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             Pen grid = new Pen(new SolidBrush(Color.Black), 1f); // Рисую ось черными линиями.
+            Pen arrows = new Pen(new SolidBrush(Color.Black), 2f);
             Graphics graphics = panel1.CreateGraphics(); // Рисую график на Panel.
 
             // Рисую ось:
@@ -34,7 +35,12 @@ namespace PCI_lab_3
                 graphics.DrawLine(grid, x, panel1.Width / 2 - 5, x, panel1.Width / 2 + 5);
                 x -= scale;
             }
-            graphics.DrawLine(grid, 
+            /**
+             * Рисование стрелки на оси Х
+             */
+            graphics.DrawLine(arrows, panel1.Width, panel1.Height / 2, panel1.Width - 15, panel1.Height /2 - 10);
+            graphics.DrawLine(arrows, panel1.Width, panel1.Height / 2, panel1.Width - 15, panel1.Height / 2 + 10);
+
 
             /**
              * Рисуем ось Y
@@ -45,7 +51,12 @@ namespace PCI_lab_3
                 graphics.DrawLine(grid, panel1.Height / 2 - 5, y, panel1.Width / 2 + 5, y);
                 y -= scale;
             }
-
+            
+            /**
+             * Рисование стрелки на оси У
+             */
+            graphics.DrawLine(arrows, panel1.Width / 2, 0, panel1.Height / 2 - 15, 15);
+            graphics.DrawLine(arrows, panel1.Width / 2, 0, panel1.Height / 2 + 15, 15);
         }
     }
 
