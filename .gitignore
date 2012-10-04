@@ -10,4 +10,15 @@
 *.lai
 *.la
 *.a
+<<<<<<< HEAD
+=======
+PCI_lab_3/PCI_lab_3/bin/
+PCI_lab_3/PCI_lab_3/obj/
+*.exe
+*.pdb
+*.manifest
+*.txt
+*.resources
+*.Cache
+>>>>>>> code-branch
 
