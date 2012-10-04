@@ -21,6 +21,7 @@ namespace PCI_lab_3
 
             Pen grid = new Pen(new SolidBrush(Color.Black), 1f); // Рисую ось черными линиями.
             Pen arrows = new Pen(new SolidBrush(Color.Black), 2f);
+            Pen colorGraphic = new Pen(new SolidBrush(Color.Red), 1f);
             Graphics graphics = panel1.CreateGraphics(); // Рисую график на Panel.
             graphics.Clear(panel1.BackColor);
 
@@ -41,29 +42,31 @@ namespace PCI_lab_3
              */
             graphics.DrawLine(arrows, panel1.Width / 2, 0, panel1.Height / 2 - 15, 15);
             graphics.DrawLine(arrows, panel1.Width / 2, 0, panel1.Height / 2 + 15, 15);
-            drawGraphic(scale);
             double i = panel1.Width / 2 / scale;
             double x1, y1,
                  x2, y2;
-            Pen colorGraphic = new Pen(new SolidBrush(Color.Red), 1f);
+            
             double mark = (panel1.Width / 2) / scale;
             int pointX = panel1.Width, pointY = panel1.Height;
 
             /**
              * Размечаем ось Х
             */
-            while (pointX > 0)
+            if (trackBar1.Value > 15)
             {
-                graphics.DrawLine(grid, pointX, panel1.Width / 2 - 5, pointX, panel1.Width / 2 + 5);
-                pointX -= Convert.ToInt32(scale);
-            }
-            /**
-             * Размечаем ось Y
-             */
-            while (pointY > 0)
-            {
-                graphics.DrawLine(grid, panel1.Height / 2 - 5, pointY, panel1.Width / 2 + 5, pointY);
-                pointY -= Convert.ToInt32(scale);
+                while (pointX > 0)
+                {
+                    graphics.DrawLine(grid, pointX, panel1.Width / 2 - 5, pointX, panel1.Width / 2 + 5);
+                    pointX -= Convert.ToInt32(scale);
+                }
+                /**
+                 * Размечаем ось Y
+                 */
+                while (pointY > 0)
+                {
+                    graphics.DrawLine(grid, panel1.Height / 2 - 5, pointY, panel1.Width / 2 + 5, pointY);
+                    pointY -= Convert.ToInt32(scale);
+                }
             }
             while (i > -panel1.Width / 2 / scale)
             {
@@ -82,16 +85,17 @@ namespace PCI_lab_3
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            trackBar1.Minimum = 5;
-            trackBar1.Maximum = 50;
+            trackBarLabelCurrent.Text = trackBar1.Value.ToString();
             trackBar1.TickFrequency = 5;
             float scale = trackBar1.Value;
             drawGraphic(scale);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form1_Shown(object sender, EventArgs e)
         {
             drawGraphic(trackBar1.Value);
+            trackBarLabelMinimum.Text = trackBar1.Minimum.ToString();
+            trackBarLabelMaximum.Text = trackBar1.Maximum.ToString();
         }
     }
 
