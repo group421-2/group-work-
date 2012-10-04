@@ -28,7 +28,7 @@ namespace PCI_lab_3
             int scale = 50;
             int x = panel1.Width;
             /**
-             * Рисуем ось Х
+             * Размечаем ось Х
              */
             while (x > 0)
             {
@@ -43,7 +43,7 @@ namespace PCI_lab_3
 
 
             /**
-             * Рисуем ось Y
+             * Размечаем ось Y
              */
             int y = panel1.Height;
             while (y > 0)
@@ -57,6 +57,31 @@ namespace PCI_lab_3
              */
             graphics.DrawLine(arrows, panel1.Width / 2, 0, panel1.Height / 2 - 15, 15);
             graphics.DrawLine(arrows, panel1.Width / 2, 0, panel1.Height / 2 + 15, 15);
+            drawGraphic(scale);
+            
+        }
+
+        private void drawGraphic(float scale)
+        {
+            float i = 5;
+            float x1,y1,
+                 x2, y2;
+            Pen colorGraphic = new Pen(new SolidBrush(Color.Red), 1f);
+            Graphics graphics = panel1.CreateGraphics(); // Рисую график на Panel.
+            float mark = (panel1.Width / 2) / scale;
+            while (i > -5)
+            {
+                x1 = i;
+                y1 = x1 * x1 * x1;
+                x1 = panel1.Width - (mark - x1) * scale;
+                y1 = (panel1.Height / 2) - y1 * scale;
+                i--;
+                x2 = i;
+                y2 = x2 * x2 * x2;
+                x2 = panel1.Width - (mark - x2) * scale;
+                y2 = (panel1.Height / 2) - y2 * scale;
+                graphics.DrawLine(colorGraphic, x1, y1, x2, y2);
+            }
         }
     }
 
