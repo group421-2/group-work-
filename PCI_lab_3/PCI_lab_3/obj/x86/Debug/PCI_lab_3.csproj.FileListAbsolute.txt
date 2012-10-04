@@ -7,3 +7,5 @@ C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\GenerateResource.read.1.t
 C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.exe
 C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.pdb
+C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.Form2.resources
+C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.Form3.resources
