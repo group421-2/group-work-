@@ -43,6 +43,7 @@
             this.graphPanel.Name = "graphPanel";
             this.graphPanel.Size = new System.Drawing.Size(400, 400);
             this.graphPanel.TabIndex = 0;
+            this.graphPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.graphPanel_Paint);
             // 
             // scaleBar
             // 
@@ -87,16 +88,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(443, 550);
+            this.ClientSize = new System.Drawing.Size(432, 550);
             this.Controls.Add(this.trackBarLabelCurrent);
             this.Controls.Add(this.trackBarLabelMinimum);
             this.Controls.Add(this.scaleBar);
             this.Controls.Add(this.trackBarLabelMaximum);
             this.Controls.Add(this.graphPanel);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Пиздатые графики";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.Shown += new System.EventHandler(this.Form1_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.scaleBar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
