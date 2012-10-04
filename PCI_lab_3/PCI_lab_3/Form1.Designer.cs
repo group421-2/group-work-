@@ -29,13 +29,12 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.accur_trackbar = new System.Windows.Forms.TrackBar();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,7 +46,7 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accur_trackbar)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -59,13 +58,6 @@
             this.button1.Text = "Do";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(572, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(400, 400);
-            this.panel1.TabIndex = 1;
             // 
             // textBox1
             // 
@@ -117,15 +109,15 @@
             this.comboBox1.TabIndex = 5;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // trackBar1
+            // accur_trackbar
             // 
-            this.trackBar1.Location = new System.Drawing.Point(195, 197);
-            this.trackBar1.Maximum = 1;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(104, 45);
-            this.trackBar1.TabIndex = 6;
-            this.trackBar1.TickFrequency = 10;
-            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            this.accur_trackbar.Location = new System.Drawing.Point(195, 197);
+            this.accur_trackbar.Maximum = 1;
+            this.accur_trackbar.Name = "accur_trackbar";
+            this.accur_trackbar.Size = new System.Drawing.Size(104, 45);
+            this.accur_trackbar.TabIndex = 6;
+            this.accur_trackbar.TickFrequency = 10;
+            this.accur_trackbar.Scroll += new System.EventHandler(this.trackBar1_Scroll_accur);
             // 
             // label1
             // 
@@ -240,19 +232,18 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.trackBar1);
+            this.Controls.Add(this.accur_trackbar);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accur_trackbar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,13 +252,12 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.TrackBar accur_trackbar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
