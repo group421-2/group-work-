@@ -97,6 +97,13 @@ namespace PCI_lab_3
             trackBarLabelMinimum.Text = trackBar1.Minimum.ToString();
             trackBarLabelMaximum.Text = trackBar1.Maximum.ToString();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            drawGraphic(trackBar1.Value);
+            trackBarLabelMinimum.Text = trackBar1.Minimum.ToString();
+            trackBarLabelMaximum.Text = trackBar1.Maximum.ToString();
+        }
     }
 
         

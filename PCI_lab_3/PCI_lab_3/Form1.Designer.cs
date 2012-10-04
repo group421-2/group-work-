@@ -76,7 +76,7 @@
             // trackBarLabelCurrent
             // 
             this.trackBarLabelCurrent.AutoSize = true;
-            this.trackBarLabelCurrent.Location = new System.Drawing.Point(246, 695);
+            this.trackBarLabelCurrent.Location = new System.Drawing.Point(299, 695);
             this.trackBarLabelCurrent.Name = "trackBarLabelCurrent";
             this.trackBarLabelCurrent.Size = new System.Drawing.Size(13, 13);
             this.trackBarLabelCurrent.TabIndex = 4;
@@ -95,6 +95,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Пиздатые графики";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.Shown += new System.EventHandler(this.Form1_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
