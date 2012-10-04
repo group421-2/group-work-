@@ -74,7 +74,10 @@ namespace PCI_lab_3
                 y1 = Math.Sin(x1);
                 x1 = graphPanel.Width - (mark - x1) * scale;
                 y1 = (graphPanel.Height / 2) - y1 * scale;
-                i--;
+                if (scale > 25)
+                    i--;
+                else
+                    i -= 0.5;
                 x2 = i;
                 y2 = Math.Sin(x2);
                 x2 = graphPanel.Width - (mark - x2) * scale;

@@ -41,16 +41,16 @@
             this.graphPanel.BackColor = System.Drawing.SystemColors.Control;
             this.graphPanel.Location = new System.Drawing.Point(12, 52);
             this.graphPanel.Name = "graphPanel";
-            this.graphPanel.Size = new System.Drawing.Size(600, 600);
+            this.graphPanel.Size = new System.Drawing.Size(400, 400);
             this.graphPanel.TabIndex = 0;
             // 
             // scaleBar
             // 
-            this.scaleBar.Location = new System.Drawing.Point(12, 671);
+            this.scaleBar.Location = new System.Drawing.Point(12, 458);
             this.scaleBar.Maximum = 50;
             this.scaleBar.Minimum = 5;
             this.scaleBar.Name = "scaleBar";
-            this.scaleBar.Size = new System.Drawing.Size(600, 45);
+            this.scaleBar.Size = new System.Drawing.Size(400, 45);
             this.scaleBar.TabIndex = 1;
             this.scaleBar.Value = 5;
             this.scaleBar.Scroll += new System.EventHandler(this.trackBar1_Scroll);
@@ -58,36 +58,36 @@
             // trackBarLabelMinimum
             // 
             this.trackBarLabelMinimum.AutoSize = true;
-            this.trackBarLabelMinimum.Location = new System.Drawing.Point(12, 655);
+            this.trackBarLabelMinimum.Location = new System.Drawing.Point(12, 506);
             this.trackBarLabelMinimum.Name = "trackBarLabelMinimum";
             this.trackBarLabelMinimum.Size = new System.Drawing.Size(46, 13);
             this.trackBarLabelMinimum.TabIndex = 2;
-            this.trackBarLabelMinimum.Text = "(-60; 60)";
+            this.trackBarLabelMinimum.Text = "(-40; 40)";
             // 
             // trackBarLabelMaximum
             // 
             this.trackBarLabelMaximum.AutoSize = true;
-            this.trackBarLabelMaximum.Location = new System.Drawing.Point(578, 655);
+            this.trackBarLabelMaximum.Location = new System.Drawing.Point(378, 506);
             this.trackBarLabelMaximum.Name = "trackBarLabelMaximum";
             this.trackBarLabelMaximum.Size = new System.Drawing.Size(34, 13);
             this.trackBarLabelMaximum.TabIndex = 3;
-            this.trackBarLabelMaximum.Text = "(-6; 6)";
+            this.trackBarLabelMaximum.Text = "(-4; 4)";
             // 
             // trackBarLabelCurrent
             // 
             this.trackBarLabelCurrent.AutoSize = true;
-            this.trackBarLabelCurrent.Location = new System.Drawing.Point(289, 719);
+            this.trackBarLabelCurrent.Location = new System.Drawing.Point(178, 506);
             this.trackBarLabelCurrent.Name = "trackBarLabelCurrent";
-            this.trackBarLabelCurrent.Size = new System.Drawing.Size(46, 13);
+            this.trackBarLabelCurrent.Size = new System.Drawing.Size(43, 13);
             this.trackBarLabelCurrent.TabIndex = 4;
-            this.trackBarLabelCurrent.Text = "(-60; 60)";
+            this.trackBarLabelCurrent.Text = "(-40;40)";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(941, 754);
+            this.ClientSize = new System.Drawing.Size(443, 550);
             this.Controls.Add(this.trackBarLabelCurrent);
             this.Controls.Add(this.trackBarLabelMinimum);
             this.Controls.Add(this.scaleBar);
