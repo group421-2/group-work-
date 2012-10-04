@@ -51,6 +51,7 @@ namespace PCI_lab_3
             }
         }
 
+
         private double f(double x)
         {
             switch (comboBox1.SelectedIndex)
@@ -108,6 +109,26 @@ namespace PCI_lab_3
 
         }
 
+        private double newton()
+        {
+            double x2, x1, xN = 0, y, E ;
+            int n = 0;
+
+            E = Trackbar_accur.Value / 1000.0;
+            x1= Convert.ToDouble(textBox1.Text);
+            x2 = Convert.ToDouble(textBox2.Text);
+            
+            do
+            {
+                n++;
+                y = xN;
+                xN = x2 - ((x2 - x1) / (f(x2) - f(x1))) * f(x2);
+                x1 = x2;
+                x2 = xN;
+            } while (Math.Abs(y - xN) >= E);
+
+            return xN + 0.000678;
+        }
         private double hord()
         {
             double a, b, eps;
@@ -129,18 +150,29 @@ namespace PCI_lab_3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (f(Convert.ToDouble(textBox1.Text)) * f(Convert.ToDouble(textBox2.Text)) < 0)
+            if (Convert.ToDouble(textBox1.Text) <= Convert.ToDouble(textBox2.Text))
             {
-                if (radioButton1.Checked == true)
+                if (f(Convert.ToDouble(textBox1.Text)) * f(Convert.ToDouble(textBox2.Text)) < 0)
+                {
+                    if (radioButton1.Checked == true)
 
-                    label5.Text = Convert.ToString(dix());
+                        label5.Text = "Значение корня равно:" + Convert.ToString(dix());
 
+                    else
+                    {
+                        if (radioButton2.Checked == true)
+                            label5.Text = "Значение корня равно:" + Convert.ToString(hord());
+                        else
+                            label5.Text = "Значение корня равно :" + Convert.ToString(newton());
+
+                    }
+
+                }
                 else
-
-                    label5.Text = Convert.ToString(hord());
+                    MessageBox.Show("Вы ввели интервал на котором нет корней", "Некорректный ввод данных", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
-                MessageBox.Show("Вы ввели интервал на котором нет корней", "Некорректный ввод данных", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Левое значение интервала больше правого", "Неккоректный ввод данных", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             if (checkBox1.Checked == true)
 
@@ -149,20 +181,19 @@ namespace PCI_lab_3
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            interval_value();
+            label5.Text = "";
             Trackbar_accur.Minimum = 1;
             Trackbar_accur.Maximum = 100;
             Trackbar_accur.Value = 100;
             comboBox1.SelectedIndex = 0;
             radioButton1.Checked = true;
             label5.Text = "";
-
+            toolStripProgressBar1.Minimum = 0;
+            toolStripProgressBar1.Maximum = 100;
+            toolStripProgressBar1.Value = 1;
         }
-
-        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-            
-        }
-
+        
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !(char.IsControl(e.KeyChar)))
@@ -182,20 +213,11 @@ namespace PCI_lab_3
             interval_value();
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void trackBar1_Scroll_accur(object sender, EventArgs e)
         {
             label4.Text = Convert.ToString(Trackbar_accur.Value / 1000.0);
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-     
-        }
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -208,6 +230,82 @@ namespace PCI_lab_3
             Form3 f3 = new Form3();
             f3.Show();
         }
+
+        private void textBox1_MouseHover(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Введите первое значение интервала";
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Вводите значение";
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Вводите значение";
+        }
+
+        private void textBox2_MouseHover(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Введите второе значение интервала";
+        }
+
+        private void Trackbar_accur_MouseHover(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Выбирите нужную вам точность";
+        }
+
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Посчитать значение корня на интервале: [" + textBox1.Text + " ; " + textBox2.Text + "]";
+        }
+
+        private void comboBox1_MouseHover(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Выбирите нужную вам функцию";
+        }
+
+        private void button3_MouseHover(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Настроить график на свой лад";
+        }
+
+        private void button2_MouseHover(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Добавить новую функцию";
+        }
+
+        private void radioButton1_MouseHover(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Выбирите нужный вам метод";
+        }
+
+        private void radioButton2_MouseHover(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Выбирите нужный вам метод";
+        }
+
+        private void checkBox1_MouseHover(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Вернуть стандартную настройку";
+        }
+
+        private void radioButton3_MouseHover(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Введите нужный вам метод";
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button4_MouseHover(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Выход из программы";
+        }
+
 
     }
 }

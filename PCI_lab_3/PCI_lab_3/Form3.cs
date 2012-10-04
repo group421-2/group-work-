@@ -25,6 +25,8 @@ namespace PCI_lab_3
                             if (!((e.KeyChar.ToString() == "*") && (textBox1.Text.IndexOf("*") == -1)))
                                 if (!((e.KeyChar.ToString() == "+") && (textBox1.Text.IndexOf("+") == -1)))
                                     if (!((e.KeyChar.ToString() == "-") && (textBox1.Text.IndexOf("-") == -1)))
+                                        if (!((e.KeyChar.ToString() == "^") && (textBox1.Text.IndexOf("^") == -1)))
+                                       
                                 e.Handled = true;
         }
 
