@@ -86,7 +86,7 @@ namespace PCI_lab_3
             double a, b, c, eps;
             int n = 0;
 
-            eps = accur_trackbar.Value / 1000.0;
+            eps = trackBar1.Value / 1000.0;
             a = Convert.ToDouble(textBox1.Text);
             b = Convert.ToDouble(textBox2.Text);
            
@@ -113,7 +113,7 @@ namespace PCI_lab_3
             double a, b, eps;
             int n = 0;
 
-            eps = accur_trackbar.Value / 1000.0;
+            eps = trackBar1.Value / 1000.0;
             a = Convert.ToDouble(textBox1.Text);
             b = Convert.ToDouble(textBox2.Text);
 
@@ -149,9 +149,9 @@ namespace PCI_lab_3
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            accur_trackbar.Minimum = 1;
-            accur_trackbar.Maximum = 100;
-            accur_trackbar.Value = 100;
+            trackBar1.Minimum = 1;
+            trackBar1.Maximum = 100;
+            trackBar1.Value = 100;
             comboBox1.SelectedIndex = 0;
             radioButton1.Checked = true;
             label5.Text = "";
@@ -187,9 +187,9 @@ namespace PCI_lab_3
 
         }
 
-        private void trackBar1_Scroll_accur(object sender, EventArgs e)
+        private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            label4.Text = Convert.ToString(accur_trackbar.Value / 1000.0);
+            label4.Text = Convert.ToString(trackBar1.Value / 1000.0);
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
