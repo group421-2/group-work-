@@ -85,7 +85,7 @@ namespace PCI_lab_3
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            trackBarLabelCurrent.Text = trackBar1.Value.ToString();
+            trackBarLabelCurrent.Text = "("+((-panel1.Width / 2) / trackBar1.Value).ToString() + " ; " + ((panel1.Width / 2) / trackBar1.Value).ToString()+")";
             trackBar1.TickFrequency = 5;
             float scale = trackBar1.Value;
             drawGraphic(scale);
@@ -94,15 +94,11 @@ namespace PCI_lab_3
         private void Form1_Shown(object sender, EventArgs e)
         {
             drawGraphic(trackBar1.Value);
-            trackBarLabelMinimum.Text = trackBar1.Minimum.ToString();
-            trackBarLabelMaximum.Text = trackBar1.Maximum.ToString();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             drawGraphic(trackBar1.Value);
-            trackBarLabelMinimum.Text = trackBar1.Minimum.ToString();
-            trackBarLabelMaximum.Text = trackBar1.Maximum.ToString();
         }
     }
 

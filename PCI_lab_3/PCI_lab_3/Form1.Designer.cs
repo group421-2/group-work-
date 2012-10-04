@@ -60,27 +60,27 @@
             this.trackBarLabelMinimum.AutoSize = true;
             this.trackBarLabelMinimum.Location = new System.Drawing.Point(9, 631);
             this.trackBarLabelMinimum.Name = "trackBarLabelMinimum";
-            this.trackBarLabelMinimum.Size = new System.Drawing.Size(35, 13);
+            this.trackBarLabelMinimum.Size = new System.Drawing.Size(46, 13);
             this.trackBarLabelMinimum.TabIndex = 2;
-            this.trackBarLabelMinimum.Text = "label1";
+            this.trackBarLabelMinimum.Text = "(-60; 60)";
             // 
             // trackBarLabelMaximum
             // 
             this.trackBarLabelMaximum.AutoSize = true;
             this.trackBarLabelMaximum.Location = new System.Drawing.Point(577, 631);
             this.trackBarLabelMaximum.Name = "trackBarLabelMaximum";
-            this.trackBarLabelMaximum.Size = new System.Drawing.Size(35, 13);
+            this.trackBarLabelMaximum.Size = new System.Drawing.Size(34, 13);
             this.trackBarLabelMaximum.TabIndex = 3;
-            this.trackBarLabelMaximum.Text = "label2";
+            this.trackBarLabelMaximum.Text = "(-6; 6)";
             // 
             // trackBarLabelCurrent
             // 
             this.trackBarLabelCurrent.AutoSize = true;
             this.trackBarLabelCurrent.Location = new System.Drawing.Point(299, 695);
             this.trackBarLabelCurrent.Name = "trackBarLabelCurrent";
-            this.trackBarLabelCurrent.Size = new System.Drawing.Size(13, 13);
+            this.trackBarLabelCurrent.Size = new System.Drawing.Size(46, 13);
             this.trackBarLabelCurrent.TabIndex = 4;
-            this.trackBarLabelCurrent.Text = "5";
+            this.trackBarLabelCurrent.Text = "(-60; 60)";
             // 
             // Form1
             // 
