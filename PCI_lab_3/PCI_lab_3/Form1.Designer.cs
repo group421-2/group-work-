@@ -33,20 +33,23 @@
             this.trackBarLabelMinimum = new System.Windows.Forms.Label();
             this.trackBarLabelMaximum = new System.Windows.Forms.Label();
             this.trackBarLabelCurrent = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(12, 52);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(600, 600);
             this.panel1.TabIndex = 0;
             // 
             // trackBar1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(12, 647);
+            this.trackBar1.Location = new System.Drawing.Point(12, 671);
             this.trackBar1.Maximum = 50;
             this.trackBar1.Minimum = 5;
             this.trackBar1.Name = "trackBar1";
@@ -58,7 +61,7 @@
             // trackBarLabelMinimum
             // 
             this.trackBarLabelMinimum.AutoSize = true;
-            this.trackBarLabelMinimum.Location = new System.Drawing.Point(9, 631);
+            this.trackBarLabelMinimum.Location = new System.Drawing.Point(12, 655);
             this.trackBarLabelMinimum.Name = "trackBarLabelMinimum";
             this.trackBarLabelMinimum.Size = new System.Drawing.Size(46, 13);
             this.trackBarLabelMinimum.TabIndex = 2;
@@ -67,7 +70,7 @@
             // trackBarLabelMaximum
             // 
             this.trackBarLabelMaximum.AutoSize = true;
-            this.trackBarLabelMaximum.Location = new System.Drawing.Point(577, 631);
+            this.trackBarLabelMaximum.Location = new System.Drawing.Point(578, 655);
             this.trackBarLabelMaximum.Name = "trackBarLabelMaximum";
             this.trackBarLabelMaximum.Size = new System.Drawing.Size(34, 13);
             this.trackBarLabelMaximum.TabIndex = 3;
@@ -76,28 +79,48 @@
             // trackBarLabelCurrent
             // 
             this.trackBarLabelCurrent.AutoSize = true;
-            this.trackBarLabelCurrent.Location = new System.Drawing.Point(299, 695);
+            this.trackBarLabelCurrent.Location = new System.Drawing.Point(289, 719);
             this.trackBarLabelCurrent.Name = "trackBarLabelCurrent";
             this.trackBarLabelCurrent.Size = new System.Drawing.Size(46, 13);
             this.trackBarLabelCurrent.TabIndex = 4;
             this.trackBarLabelCurrent.Text = "(-60; 60)";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.настройкиToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(941, 24);
+            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // настройкиToolStripMenuItem
+            // 
+            this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
+            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
+            this.настройкиToolStripMenuItem.Text = "Настройки";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(927, 736);
+            this.ClientSize = new System.Drawing.Size(941, 754);
             this.Controls.Add(this.trackBarLabelCurrent);
             this.Controls.Add(this.trackBarLabelMinimum);
             this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.trackBarLabelMaximum);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Пиздатые графики";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Shown += new System.EventHandler(this.Form1_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,6 +133,8 @@
         private System.Windows.Forms.Label trackBarLabelMinimum;
         private System.Windows.Forms.Label trackBarLabelMaximum;
         private System.Windows.Forms.Label trackBarLabelCurrent;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem настройкиToolStripMenuItem;
 
     }
 }

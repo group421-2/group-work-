@@ -1,0 +1,14 @@
+C:\Users\PeoneEr\AppData\Local\Temporary Projects\PCI_lab_3\bin\Debug\PCI_lab_3.exe
+C:\Users\PeoneEr\AppData\Local\Temporary Projects\PCI_lab_3\bin\Debug\PCI_lab_3.pdb
+C:\Users\PeoneEr\AppData\Local\Temporary Projects\PCI_lab_3\obj\x86\Debug\PCI_lab_3.Form1.resources
+C:\Users\PeoneEr\AppData\Local\Temporary Projects\PCI_lab_3\obj\x86\Debug\PCI_lab_3.Properties.Resources.resources
+C:\Users\PeoneEr\AppData\Local\Temporary Projects\PCI_lab_3\obj\x86\Debug\PCI_lab_3.csproj.GenerateResource.Cache
+C:\Users\PeoneEr\AppData\Local\Temporary Projects\PCI_lab_3\obj\x86\Debug\PCI_lab_3.exe
+C:\Users\PeoneEr\AppData\Local\Temporary Projects\PCI_lab_3\obj\x86\Debug\PCI_lab_3.pdb
+C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.exe
+C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.pdb
+C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\bin\Debug\PCI_lab_3.exe
+C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\bin\Debug\PCI_lab_3.pdb
+C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.Form1.resources
+C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.Properties.Resources.resources
+C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.csproj.GenerateResource.Cache
