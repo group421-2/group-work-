@@ -22,41 +22,41 @@ namespace PCI_lab_3
             Pen grid = new Pen(new SolidBrush(Color.Black), 1f); // Рисую ось черными линиями.
             Pen arrows = new Pen(new SolidBrush(Color.Black), 2f);
             Pen colorGraphic = new Pen(new SolidBrush(Color.Red), 1f);
-            Graphics graphics = panel1.CreateGraphics(); // Рисую график на Panel.
-            graphics.Clear(panel1.BackColor);
+            Graphics graphics = graphPanel.CreateGraphics(); // Рисую график на Panel.
+            graphics.Clear(graphPanel.BackColor);
 
 
             // Рисую ось:
-            graphics.DrawLine(grid, 0, panel1.Width / 2, panel1.Width, panel1.Width / 2);
-            graphics.DrawLine(grid, panel1.Width / 2, 0, panel1.Width / 2, panel1.Height);
+            graphics.DrawLine(grid, 0, graphPanel.Width / 2, graphPanel.Width, graphPanel.Width / 2);
+            graphics.DrawLine(grid, graphPanel.Width / 2, 0, graphPanel.Width / 2, graphPanel.Height);
 
             /**
              * Рисование стрелки на оси Х
              */
-            graphics.DrawLine(arrows, panel1.Width, panel1.Height / 2, panel1.Width - 15, panel1.Height / 2 - 10);
-            graphics.DrawLine(arrows, panel1.Width, panel1.Height / 2, panel1.Width - 15, panel1.Height / 2 + 10);
+            graphics.DrawLine(arrows, graphPanel.Width, graphPanel.Height / 2, graphPanel.Width - 15, graphPanel.Height / 2 - 10);
+            graphics.DrawLine(arrows, graphPanel.Width, graphPanel.Height / 2, graphPanel.Width - 15, graphPanel.Height / 2 + 10);
 
 
             /**
              * Рисование стрелки на оси У
              */
-            graphics.DrawLine(arrows, panel1.Width / 2, 0, panel1.Height / 2 - 15, 15);
-            graphics.DrawLine(arrows, panel1.Width / 2, 0, panel1.Height / 2 + 15, 15);
-            double i = panel1.Width / 2 / scale;
+            graphics.DrawLine(arrows, graphPanel.Width / 2, 0, graphPanel.Height / 2 - 15, 15);
+            graphics.DrawLine(arrows, graphPanel.Width / 2, 0, graphPanel.Height / 2 + 15, 15);
+            double i = graphPanel.Width / 2 / scale;
             double x1, y1,
                  x2, y2;
             
-            double mark = (panel1.Width / 2) / scale;
-            int pointX = panel1.Width, pointY = panel1.Height;
+            double mark = (graphPanel.Width / 2) / scale;
+            int pointX = graphPanel.Width, pointY = graphPanel.Height;
 
             /**
              * Размечаем ось Х
             */
-            if (trackBar1.Value > 15)
+            if (scaleBar.Value > 15)
             {
                 while (pointX > 0)
                 {
-                    graphics.DrawLine(grid, pointX, panel1.Width / 2 - 5, pointX, panel1.Width / 2 + 5);
+                    graphics.DrawLine(grid, pointX, graphPanel.Width / 2 - 5, pointX, graphPanel.Width / 2 + 5);
                     pointX -= Convert.ToInt32(scale);
                 }
                 /**
@@ -64,41 +64,41 @@ namespace PCI_lab_3
                  */
                 while (pointY > 0)
                 {
-                    graphics.DrawLine(grid, panel1.Height / 2 - 5, pointY, panel1.Width / 2 + 5, pointY);
+                    graphics.DrawLine(grid, graphPanel.Height / 2 - 5, pointY, graphPanel.Width / 2 + 5, pointY);
                     pointY -= Convert.ToInt32(scale);
                 }
             }
-            while (i > -panel1.Width / 2 / scale)
+            while (i > -graphPanel.Width / 2 / scale)
             {
                 x1 = i;
                 y1 = Math.Sin(x1);
-                x1 = panel1.Width - (mark - x1) * scale;
-                y1 = (panel1.Height / 2) - y1 * scale;
+                x1 = graphPanel.Width - (mark - x1) * scale;
+                y1 = (graphPanel.Height / 2) - y1 * scale;
                 i--;
                 x2 = i;
                 y2 = Math.Sin(x2);
-                x2 = panel1.Width - (mark - x2) * scale;
-                y2 = (panel1.Height / 2) - y2 * scale;
+                x2 = graphPanel.Width - (mark - x2) * scale;
+                y2 = (graphPanel.Height / 2) - y2 * scale;
                 graphics.DrawLine(colorGraphic, (float)x1, (float)y1, (float)x2, (float)y2);
             }
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            trackBarLabelCurrent.Text = "("+((-panel1.Width / 2) / trackBar1.Value).ToString() + " ; " + ((panel1.Width / 2) / trackBar1.Value).ToString()+")";
-            trackBar1.TickFrequency = 5;
-            float scale = trackBar1.Value;
+            trackBarLabelCurrent.Text = "("+((-graphPanel.Width / 2) / scaleBar.Value).ToString() + " ; " + ((graphPanel.Width / 2) / scaleBar.Value).ToString()+")";
+            scaleBar.TickFrequency = 5;
+            float scale = scaleBar.Value;
             drawGraphic(scale);
         }
 
         private void Form1_Shown(object sender, EventArgs e)
         {
-            drawGraphic(trackBar1.Value);
+            drawGraphic(scaleBar.Value);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            drawGraphic(trackBar1.Value);
+            drawGraphic(scaleBar.Value);
         }
     }
 

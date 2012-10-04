@@ -28,35 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.graphPanel = new System.Windows.Forms.Panel();
+            this.scaleBar = new System.Windows.Forms.TrackBar();
             this.trackBarLabelMinimum = new System.Windows.Forms.Label();
             this.trackBarLabelMaximum = new System.Windows.Forms.Label();
             this.trackBarLabelCurrent = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scaleBar)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // graphPanel
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Location = new System.Drawing.Point(12, 52);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(600, 600);
-            this.panel1.TabIndex = 0;
+            this.graphPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.graphPanel.Location = new System.Drawing.Point(12, 52);
+            this.graphPanel.Name = "graphPanel";
+            this.graphPanel.Size = new System.Drawing.Size(600, 600);
+            this.graphPanel.TabIndex = 0;
             // 
-            // trackBar1
+            // scaleBar
             // 
-            this.trackBar1.Location = new System.Drawing.Point(12, 671);
-            this.trackBar1.Maximum = 50;
-            this.trackBar1.Minimum = 5;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(600, 45);
-            this.trackBar1.TabIndex = 1;
-            this.trackBar1.Value = 5;
-            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            this.scaleBar.Location = new System.Drawing.Point(12, 671);
+            this.scaleBar.Maximum = 50;
+            this.scaleBar.Minimum = 5;
+            this.scaleBar.Name = "scaleBar";
+            this.scaleBar.Size = new System.Drawing.Size(600, 45);
+            this.scaleBar.TabIndex = 1;
+            this.scaleBar.Value = 5;
+            this.scaleBar.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // trackBarLabelMinimum
             // 
@@ -85,22 +82,6 @@
             this.trackBarLabelCurrent.TabIndex = 4;
             this.trackBarLabelCurrent.Text = "(-60; 60)";
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.настройкиToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(941, 24);
-            this.menuStrip1.TabIndex = 5;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // настройкиToolStripMenuItem
-            // 
-            this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
-            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
-            this.настройкиToolStripMenuItem.Text = "Настройки";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -109,18 +90,14 @@
             this.ClientSize = new System.Drawing.Size(941, 754);
             this.Controls.Add(this.trackBarLabelCurrent);
             this.Controls.Add(this.trackBarLabelMinimum);
-            this.Controls.Add(this.trackBar1);
+            this.Controls.Add(this.scaleBar);
             this.Controls.Add(this.trackBarLabelMaximum);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.graphPanel);
             this.Name = "Form1";
             this.Text = "Пиздатые графики";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Shown += new System.EventHandler(this.Form1_Shown);
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scaleBar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,13 +105,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.Panel graphPanel;
+        private System.Windows.Forms.TrackBar scaleBar;
         private System.Windows.Forms.Label trackBarLabelMinimum;
         private System.Windows.Forms.Label trackBarLabelMaximum;
         private System.Windows.Forms.Label trackBarLabelCurrent;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem настройкиToolStripMenuItem;
 
     }
 }
