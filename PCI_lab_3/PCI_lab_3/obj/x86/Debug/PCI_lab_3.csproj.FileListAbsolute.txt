@@ -22,3 +22,12 @@ F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.Form1.resource
 F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.Properties.Resources.resources
 F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\GenerateResource.read.1.tlog
 F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\PeoneEr\Мои документы\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.exe
+C:\Documents and Settings\PeoneEr\Мои документы\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.pdb
+C:\Documents and Settings\PeoneEr\Мои документы\GitHub\group-work-\PCI_lab_3\PCI_lab_3\bin\Debug\PCI_lab_3.exe
+C:\Documents and Settings\PeoneEr\Мои документы\GitHub\group-work-\PCI_lab_3\PCI_lab_3\bin\Debug\PCI_lab_3.pdb
+C:\Documents and Settings\PeoneEr\Мои документы\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\PeoneEr\Мои документы\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.Form1.resources
+C:\Documents and Settings\PeoneEr\Мои документы\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.Properties.Resources.resources
+C:\Documents and Settings\PeoneEr\Мои документы\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\PeoneEr\Мои документы\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\GenerateResource.write.1.tlog
