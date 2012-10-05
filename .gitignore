@@ -11,8 +11,6 @@
 *.lai
 *.la
 *.a
-<<<<<<< HEAD
-=======
 PCI_lab_3/PCI_lab_3/bin/
 PCI_lab_3/PCI_lab_3/obj/
 *.exe
@@ -21,5 +19,3 @@ PCI_lab_3/PCI_lab_3/obj/
 *.txt
 *.resources
 *.Cache
->>>>>>> code-branch
-
