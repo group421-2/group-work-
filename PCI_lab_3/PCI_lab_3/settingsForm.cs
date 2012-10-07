@@ -15,48 +15,71 @@ namespace PCI_lab_3
         public static Color graphicColor; //цвет графика
         public static Single thickness; //толщина графика
         public static bool net; //сетка
+        private static string settings = "C:\\Sites\\group-work-\\PCI_lab_3\\PCI_lab_3\\settings.ini";
+
 
         public settingsForm()
         {
             InitializeComponent();
-            parseSettings("C:\\Sites\\group-work-\\PCI_lab_3\\PCI_lab_3\\settings.ini");
+            parseSettings();
             comboBox1.SelectedIndex = (int)thickness - 1;
+            textBox1.BackColor = graphicColor;
+            if (net)
+            {
+                checkBox1.Checked = true;
+            }
         }
 
-        private void panel1_Click(object sender, EventArgs e)
+        private void parseSettings()
         {
-
-        }
-
-        private void parseSettings(string settings)
-        {
-            byte i = 1;
             string s = "";
             if (!File.Exists(settings))
             {
                 MessageBox.Show("Идите нахуй");
             }
             StreamReader sr = File.OpenText(settings);
-            while ((s = sr.ReadLine()) != null)
-            {
-                switch (i)
-                {
-                    case 1:
-                        int RGB = int.Parse(s, System.Globalization.NumberStyles.AllowHexSpecifier);
-                        graphicColor = Color.FromArgb(RGB); i++;
-                        break;
-                    case 2: thickness = Single.Parse(s); i++;
-                        break;
-                    case 3: net = bool.Parse(s); i = 1;
-                        break;
-                }
-            }
+            s = sr.ReadLine();
+            int RGB = int.Parse(s, System.Globalization.NumberStyles.AllowHexSpecifier);
+            graphicColor = Color.FromArgb(RGB);
+            s = sr.ReadLine();
+            thickness = Single.Parse(s);
+            s = sr.ReadLine();
+            net = bool.Parse(s);
             sr.Close();
         }
 
-        private void graphiColor_Paint(object sender, PaintEventArgs e)
+        public static string ColorToHexString(Color color)
         {
-            graphiColor.BackColor = graphicColor;
+            return string.Format("{0:X2}{1:X2}{2:X2}{3:X2}",
+                      color.A,
+                      color.R,
+                      color.G,
+                      color.B);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                textBox1.BackColor = colorDialog1.Color;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            StreamWriter sw = new StreamWriter(File.OpenWrite(settings));
+
+            sw.WriteLine(ColorToHexString(colorDialog1.Color));
+            sw.WriteLine(comboBox1.Text);
+            sw.WriteLine((checkBox1.Checked) ? "true" : "false");
+            sw.Close();
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

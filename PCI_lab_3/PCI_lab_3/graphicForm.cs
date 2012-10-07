@@ -15,11 +15,12 @@ namespace PCI_lab_3
         public static Color graphicColor; //цвет графика
         public static Single thickness; //толщина графика
         public static bool net; //сетка
+        private static string settings = "C:\\Sites\\group-work-\\PCI_lab_3\\PCI_lab_3\\settings.ini";
 
         public graphicForm()
         {
             InitializeComponent();
-            parseSettings("C:\\Sites\\group-work-\\PCI_lab_3\\PCI_lab_3\\settings.ini");
+            parseSettings();
         }
 
         private void drawGraphic(float scale)
@@ -117,36 +118,32 @@ namespace PCI_lab_3
             drawGraphic(scaleBar.Value);
         }
 
-        private void parseSettings(string settings)
+        private void parseSettings()
         {
-            byte i = 1;
             string s = "";
             if (!File.Exists(settings))
             {
                 MessageBox.Show("Идите нахуй");
             }
             StreamReader sr = File.OpenText(settings);
-            while ((s = sr.ReadLine()) != null)
-            {
-                switch (i)
-                {
-                    case 1: 
-                        int RGB = int.Parse(s, System.Globalization.NumberStyles.AllowHexSpecifier);
-                        graphicColor = Color.FromArgb(RGB); i++;
-                        break;
-                    case 2: thickness = Single.Parse(s); i++;
-                        break;
-                    case 3: net = bool.Parse(s); i = 1;
-                        break;
-                }
-            }
+            s = sr.ReadLine();
+            int RGB = int.Parse(s, System.Globalization.NumberStyles.AllowHexSpecifier);
+            graphicColor = Color.FromArgb(RGB);
+            s = sr.ReadLine();
+            thickness = Single.Parse(s);
+            s = sr.ReadLine();
+            net = bool.Parse(s);
             sr.Close();
         }
 
         private void настройкиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             settingsForm sf = new settingsForm();
-            sf.ShowDialog();
+            if (sf.ShowDialog() == DialogResult.OK)
+            {
+                parseSettings();
+                drawGraphic(scaleBar.Value);
+            }
         }
 
     }
