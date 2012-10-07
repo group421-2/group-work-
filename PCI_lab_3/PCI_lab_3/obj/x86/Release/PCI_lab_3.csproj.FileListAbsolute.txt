@@ -1,6 +1,5 @@
 C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\bin\Release\PCI_lab_3.exe
 C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\bin\Release\PCI_lab_3.pdb
-C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Release\PCI_lab_3.Form1.resources
 C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Release\PCI_lab_3.Properties.Resources.resources
 C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Release\PCI_lab_3.csproj.GenerateResource.Cache
 C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Release\PCI_lab_3.exe
@@ -14,3 +13,5 @@ F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Release\GenerateResource.read.
 F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Release\GenerateResource.write.1.tlog
 F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Release\PCI_lab_3.exe
 F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Release\PCI_lab_3.pdb
+C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Release\PCI_lab_3.graphicForm.resources
+C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Release\PCI_lab_3.settingsForm.resources
