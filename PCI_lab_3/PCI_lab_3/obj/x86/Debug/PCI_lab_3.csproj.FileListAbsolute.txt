@@ -24,3 +24,4 @@ C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.settingsForm.re
 F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.graphicForm.resources
 F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.settingsForm.resources
 F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.confirmForm.resources
+C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.confirmForm.resources
