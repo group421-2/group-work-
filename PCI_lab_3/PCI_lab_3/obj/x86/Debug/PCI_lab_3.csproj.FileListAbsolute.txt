@@ -1,0 +1,3 @@
+C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.graphicForm.resources
+C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.settingsForm.resources
+C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.csproj.GenerateResource.Cache
