@@ -6,23 +6,42 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 
 namespace PCI_lab_3
 {
-    public partial class Form1 : Form
+    public partial class graphicForm : Form
     {
-        public Form1()
+        public static Color graphicColor; //цвет графика
+        public static Single thickness; //толщина графика
+        public static bool net; //сетка
+        private static string settings = "C:\\Sites\\group-work-\\PCI_lab_3\\PCI_lab_3\\settings.ini";
+
+        public graphicForm()
         {
             InitializeComponent();
+            parseSettings();
         }
 
         private void drawGraphic(float scale)
         {
             Graphics graphics = graphPanel.CreateGraphics(); // Рисую график на Panel.
             graphics.Clear(graphPanel.BackColor);
+
             Pen grid = new Pen(new SolidBrush(Color.Black), 1f); // Рисую ось черными линиями.
-            Pen colorGraphic = new Pen(new SolidBrush (Color.Red), 1f);
-        
+            Pen colorGraphic = new Pen(new SolidBrush (graphicColor), thickness);
+            Pen netColor = new Pen(new SolidBrush(Color.Pink), 0.5f);
+            
+            if (net)
+            {
+                float i1 = graphPanel.Width;
+                while (i1 > 0)
+                {
+                    graphics.DrawLine(netColor, 0, i1, graphPanel.Height, i1);
+                    graphics.DrawLine(netColor, i1, 0, i1, graphPanel.Width);
+                    i1 -= scale;
+                }
+            }
 
 
             // Рисую ось:
@@ -90,11 +109,41 @@ namespace PCI_lab_3
             scaleBar.TickFrequency = 5;
             float scale = scaleBar.Value;
             drawGraphic(scale);
+
         }
 
         private void graphPanel_Paint(object sender, PaintEventArgs e)
         {
+
             drawGraphic(scaleBar.Value);
+        }
+
+        private void parseSettings()
+        {
+            string s = "";
+            if (!File.Exists(settings))
+            {
+                MessageBox.Show("Идите нахуй");
+            }
+            StreamReader sr = File.OpenText(settings);
+            s = sr.ReadLine();
+            int RGB = int.Parse(s, System.Globalization.NumberStyles.AllowHexSpecifier);
+            graphicColor = Color.FromArgb(RGB);
+            s = sr.ReadLine();
+            thickness = Single.Parse(s);
+            s = sr.ReadLine();
+            net = bool.Parse(s);
+            sr.Close();
+        }
+
+        private void настройкиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            settingsForm sf = new settingsForm();
+            if (sf.ShowDialog() == DialogResult.OK)
+            {
+                parseSettings();
+                drawGraphic(scaleBar.Value);
+            }
         }
 
     }
