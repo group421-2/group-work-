@@ -13,9 +13,11 @@ namespace PCI_lab_3
     public partial class graphicForm : Form
     {
         public static Color graphicColor; //цвет графика
+        public static Color backColor; //цвет фона
+        public static Color netColor; //цвет сетки
         public static Single thickness; //толщина графика
         public static bool net; //сетка
-        private static string settings = "C:\\Sites\\group-work-\\PCI_lab_3\\PCI_lab_3\\settings.ini";
+        private static string settings = "F:\\GitHub\\group-work-\\PCI_lab_3\\PCI_lab_3\\settings.ini";
 
         public graphicForm()
         {
@@ -25,69 +27,59 @@ namespace PCI_lab_3
 
         private void drawGraphic(float scale)
         {
-            Graphics graphics = graphPanel.CreateGraphics(); // Рисую график на Panel.
-            graphics.Clear(graphPanel.BackColor);
+            // Рисую график на Panel.
+            Graphics graphics = graphPanel.CreateGraphics(); 
+            graphics.Clear(backColor);
 
-            Pen grid = new Pen(new SolidBrush(Color.Black), 1f); // Рисую ось черными линиями.
+            Pen grid = new Pen(new SolidBrush(Color.Black), 3f); 
             Pen colorGraphic = new Pen(new SolidBrush (graphicColor), thickness);
-            Pen netColor = new Pen(new SolidBrush(Color.Pink), 0.5f);
-            
+            Pen PenColor = new Pen(new SolidBrush(netColor), 0.5f);
+           
+            //Рисую сетку
             if (net)
             {
                 float i1 = graphPanel.Width;
                 while (i1 > 0)
                 {
-                    graphics.DrawLine(netColor, 0, i1, graphPanel.Height, i1);
-                    graphics.DrawLine(netColor, i1, 0, i1, graphPanel.Width);
+                    graphics.DrawLine(PenColor, 0, i1, graphPanel.Height, i1);
+                    graphics.DrawLine(PenColor, i1, 0, i1, graphPanel.Width);
                     i1 -= scale;
                 }
             }
-
 
             // Рисую ось:
             graphics.DrawLine(grid, 0, graphPanel.Width / 2, graphPanel.Width, graphPanel.Width / 2);
             graphics.DrawLine(grid, graphPanel.Width / 2, 0, graphPanel.Width / 2, graphPanel.Height);
 
-            /**
-             * Рисование стрелки на оси Х
-             */
+            //Рисование стрелки на оси Х
             graphics.DrawLine(grid, graphPanel.Width, graphPanel.Height / 2, graphPanel.Width - 10, graphPanel.Height / 2 - 5);
             graphics.DrawLine(grid, graphPanel.Width, graphPanel.Height / 2, graphPanel.Width - 10, graphPanel.Height / 2 + 5);
 
-
-            /**
-             * Рисование стрелки на оси У
-             */
+            //Рисование стрелки на оси У
             graphics.DrawLine(grid, graphPanel.Width / 2, 0, graphPanel.Height / 2 - 5, 10);
             graphics.DrawLine(grid, graphPanel.Width / 2, 0, graphPanel.Height / 2 + 5, 10);
-            double i = graphPanel.Width / 2 / scale;
-            double x1, y1,
-                 x2, y2;
             
-            double mark = (graphPanel.Width / 2) / scale;
             int pointX = graphPanel.Width/2, pointY = graphPanel.Height/2;
 
-            /**
-             * Размечаем ось Х
-            */
+            //Размечаем ось Х,Y
             if (scaleBar.Value > 15)
             {
                 while (pointX > 0)
                 {
                     graphics.DrawLine(grid, pointX, graphPanel.Width / 2 - 5, pointX, graphPanel.Width / 2 + 5);
                     graphics.DrawLine(grid, graphPanel.Height / 2 - 5, pointX, graphPanel.Width / 2 + 5, pointX);
-                    pointX -= Convert.ToInt32(scale);
-                }
-                /**
-                 * Размечаем ось Y
-                 */
-                while (pointY <400)
-                {
                     graphics.DrawLine(grid, pointY, graphPanel.Width / 2 - 5, pointY, graphPanel.Width / 2 + 5);
                     graphics.DrawLine(grid, graphPanel.Height / 2 - 5, pointY, graphPanel.Width / 2 + 5, pointY);
                     pointY += Convert.ToInt32(scale);
+                    pointX -= Convert.ToInt32(scale);
                 }
             }
+
+            //Рисую график
+            double i = graphPanel.Width / 2 / scale;
+            double x1, y1,
+                 x2, y2;
+            double mark = (graphPanel.Width / 2) / scale;
             while (i > -graphPanel.Width / 2 / scale)
             {
                 x1 = i;
@@ -105,6 +97,7 @@ namespace PCI_lab_3
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
+            //Изменение масштаба
             trackBarLabelCurrent.Text = "("+((-graphPanel.Width / 2) / scaleBar.Value).ToString() + " ; " + ((graphPanel.Width / 2) / scaleBar.Value).ToString()+")";
             scaleBar.TickFrequency = 5;
             float scale = scaleBar.Value;
@@ -114,7 +107,6 @@ namespace PCI_lab_3
 
         private void graphPanel_Paint(object sender, PaintEventArgs e)
         {
-
             drawGraphic(scaleBar.Value);
         }
 
@@ -125,15 +117,30 @@ namespace PCI_lab_3
             {
                 MessageBox.Show("Идите нахуй");
             }
-            StreamReader sr = File.OpenText(settings);
-            s = sr.ReadLine();
-            int RGB = int.Parse(s, System.Globalization.NumberStyles.AllowHexSpecifier);
-            graphicColor = Color.FromArgb(RGB);
-            s = sr.ReadLine();
-            thickness = Single.Parse(s);
-            s = sr.ReadLine();
-            net = bool.Parse(s);
-            sr.Close();
+            else
+            {
+                StreamReader sr = File.OpenText(settings);
+
+                s = sr.ReadLine();
+                int RGB = int.Parse(s, System.Globalization.NumberStyles.AllowHexSpecifier);
+                graphicColor = Color.FromArgb(RGB);
+
+                s = sr.ReadLine();
+                RGB = int.Parse(s, System.Globalization.NumberStyles.AllowHexSpecifier);
+                backColor = Color.FromArgb(RGB);
+
+                s = sr.ReadLine();
+                RGB = int.Parse(s, System.Globalization.NumberStyles.AllowHexSpecifier);
+                netColor = Color.FromArgb(RGB);
+
+                s = sr.ReadLine();
+                thickness = Single.Parse(s);
+
+                s = sr.ReadLine();
+                net = bool.Parse(s);
+
+                sr.Close();
+            }
         }
 
         private void настройкиToolStripMenuItem_Click(object sender, EventArgs e)
