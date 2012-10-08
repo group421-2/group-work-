@@ -3,6 +3,7 @@ C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.graphicForm.res
 C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.settingsForm.resources
 C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.csproj.GenerateResource.Cache
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\bin\Debug\PCI_lab_3.exe
 C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\bin\Debug\PCI_lab_3.pdb
 C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.Properties.Resources.resources
@@ -23,5 +24,7 @@ C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.Form3.resources
 F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.exe
 F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.pdb
 >>>>>>> Victor
+=======
+>>>>>>> parent of 83b4a22... ���!
 =======
 >>>>>>> parent of 83b4a22... ���!
