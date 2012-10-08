@@ -16,9 +16,11 @@ F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.pdb
 F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\bin\Debug\PCI_lab_3.exe
 F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\bin\Debug\PCI_lab_3.pdb
 F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\ResolveAssemblyReference.cache
-F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.Form1.resources
 F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.Properties.Resources.resources
 F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\GenerateResource.read.1.tlog
 F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.graphicForm.resources
 C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.settingsForm.resources
+F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.graphicForm.resources
+F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.settingsForm.resources
+F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.confirmForm.resources
