@@ -224,7 +224,7 @@
             this.groupBox2.Controls.Add(this.trackBar1);
             this.groupBox2.Controls.Add(this.textBox2);
             this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Location = new System.Drawing.Point(452, 282);
+            this.groupBox2.Location = new System.Drawing.Point(452, 252);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(351, 170);
             this.groupBox2.TabIndex = 9;

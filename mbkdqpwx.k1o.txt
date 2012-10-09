@@ -1,0 +1,25 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch code-branch
+# Your branch is ahead of 'origin/code-branch' by 4 commits.
+#
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   PCI_lab_3/PCI_lab_3.suo
+#	modified:   PCI_lab_3/PCI_lab_3/bin/Debug/PCI_lab_3.exe
+#	modified:   PCI_lab_3/PCI_lab_3/bin/Debug/PCI_lab_3.pdb
+#	modified:   PCI_lab_3/PCI_lab_3/bin/Release/PCI_lab_3.exe
+#	modified:   PCI_lab_3/PCI_lab_3/bin/Release/PCI_lab_3.pdb
+#	modified:   PCI_lab_3/PCI_lab_3/graphicForm.Designer.cs
+#	modified:   PCI_lab_3/PCI_lab_3/graphicForm.cs
+#	modified:   PCI_lab_3/PCI_lab_3/obj/x86/Debug/PCI_lab_3.csproj.GenerateResource.Cache
+#	modified:   PCI_lab_3/PCI_lab_3/obj/x86/Debug/PCI_lab_3.exe
+#	modified:   PCI_lab_3/PCI_lab_3/obj/x86/Debug/PCI_lab_3.pdb
+#	modified:   PCI_lab_3/PCI_lab_3/obj/x86/Release/PCI_lab_3.csproj.GenerateResource.Cache
+#	modified:   PCI_lab_3/PCI_lab_3/obj/x86/Release/PCI_lab_3.exe
+#	modified:   PCI_lab_3/PCI_lab_3/obj/x86/Release/PCI_lab_3.pdb
+#	modified:   PCI_lab_3/PCI_lab_3/settings.ini
+hooeta
+
