@@ -17,7 +17,7 @@ namespace PCI_lab_3
         public static Color netColor; //цвет сетки
         public static Single thickness; //толщина графика
         public static bool net; //сетка
-        private static string settings = "C:\\Sites\\group-work-\\PCI_lab_3\\PCI_lab_3\\settings.ini";
+        private static string settings = "F:\\GitHub\\group-work-\\PCI_lab_3\\PCI_lab_3\\settings.ini";
 
 
         public settingsForm()
@@ -152,6 +152,11 @@ namespace PCI_lab_3
                 colorDialog3.Color = Color.Pink;
                 checkBox1.Checked = true;
             }
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
 
         }
 

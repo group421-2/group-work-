@@ -30,6 +30,10 @@
         {
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -43,11 +47,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.colorDialog2 = new System.Windows.Forms.ColorDialog();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.colorDialog3 = new System.Windows.Forms.ColorDialog();
-            this.button6 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,6 +74,44 @@
             this.groupBox1.Size = new System.Drawing.Size(408, 252);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(9, 184);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(124, 23);
+            this.button6.TabIndex = 17;
+            this.button6.Text = "Сбросить настройки";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 125);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(64, 13);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Цвет сетки";
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(111, 147);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(83, 23);
+            this.button5.TabIndex = 15;
+            this.button5.Text = "Выбрать цвет";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Enabled = false;
+            this.textBox3.Location = new System.Drawing.Point(9, 149);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(99, 20);
+            this.textBox3.TabIndex = 14;
             // 
             // label3
             // 
@@ -193,43 +231,6 @@
             this.label1.Size = new System.Drawing.Size(78, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Цвет графика";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 125);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 13);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Цвет сетки";
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(111, 147);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(83, 23);
-            this.button5.TabIndex = 15;
-            this.button5.Text = "Выбрать цвет";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // textBox3
-            // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(9, 149);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(99, 20);
-            this.textBox3.TabIndex = 14;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(9, 184);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(124, 23);
-            this.button6.TabIndex = 17;
-            this.button6.Text = "Сбросить настройки";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // settingsForm
             // 

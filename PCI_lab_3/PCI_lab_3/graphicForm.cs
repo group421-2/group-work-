@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using System.Threading;
 
 namespace PCI_lab_3
 {
@@ -17,7 +18,7 @@ namespace PCI_lab_3
         public static Color netColor; //цвет сетки
         public static Single thickness; //толщина графика
         public static bool net; //сетка
-        private static string settings = "C:\\Sites\\group-work-\\PCI_lab_3\\PCI_lab_3\\settings.ini";
+        private static string settings = "F:\\GitHub\\group-work-\\PCI_lab_3\\PCI_lab_3\\settings.ini";
 
         public graphicForm()
         {
@@ -26,10 +27,10 @@ namespace PCI_lab_3
             scaleBar.Value = 25;
             comboBox1.SelectedIndex = 0;
             trackBarLabelCurrent.Text = "(" + ((-graphPanel.Width / 2) / scaleBar.Value).ToString() + " ; " + ((graphPanel.Width / 2) / scaleBar.Value).ToString() + ")";
-            trackBar1.Value = 100;
             interval_value();
+            trackBar1.Value = 100;
             radioButton1.Select();
-            checkInterval();
+
         }
 
 
@@ -38,38 +39,40 @@ namespace PCI_lab_3
             switch (comboBox1.SelectedIndex)
             {
                 case 0:
-                        textBox1.Text = "2";
-                        textBox2.Text = "3";
-                        break;
+                    textBox1.Text = "2";
+                    textBox2.Text = "3";
+                    break;
                 case 1:
-                        textBox1.Text = "1";
-                        textBox2.Text = "2";
-                        break;
+                    textBox1.Text = "1";
+                    textBox2.Text = "2";
+                    break;
                 case 2:
-                        textBox1.Text = "19,5";
-                        textBox2.Text = "21,2";
-                        break;
+                    textBox1.Text = "19,5";
+                    textBox2.Text = "21,2";
+                    break;
                 case 3:
-                        textBox1.Text = "2";
-                        textBox2.Text = "3";
-                        break;
+                    textBox1.Text = "2";
+                    textBox2.Text = "3";
+                    break;
                 case 4:
-                        textBox1.Text = "0,2";
-                        textBox2.Text = "1";
-                        break;
+                    textBox1.Text = "0,2";
+                    textBox2.Text = "1";
+                    break;
             }
         }
 
-        private void drawGraphic(float scale)
+        private void drawGraphic(int scale, double hui)
         {
             // Рисую график на Panel.
-            Graphics graphics = graphPanel.CreateGraphics(); 
+            Graphics graphics = graphPanel.CreateGraphics();
             graphics.Clear(backColor);
+            //Thread.Sleep(500);
 
-            Pen grid = new Pen(new SolidBrush(Color.Black), 3f); 
-            Pen colorGraphic = new Pen(new SolidBrush (graphicColor), thickness);
+            Pen grid = new Pen(new SolidBrush(Color.Black), 3f);
+            Pen colorGraphic = new Pen(new SolidBrush(graphicColor), thickness);
             Pen PenColor = new Pen(new SolidBrush(netColor), 0.5f);
-           
+            Pen HuiColor = new Pen(new SolidBrush(Color.Black), 2f);
+
             //Рисую сетку
             if (net)
             {
@@ -93,8 +96,8 @@ namespace PCI_lab_3
             //Рисование стрелки на оси У
             graphics.DrawLine(grid, graphPanel.Width / 2, 0, graphPanel.Height / 2 - 5, 10);
             graphics.DrawLine(grid, graphPanel.Width / 2, 0, graphPanel.Height / 2 + 5, 10);
-            
-            int pointX = graphPanel.Width/2, pointY = graphPanel.Height/2;
+
+            int pointX = graphPanel.Width / 2, pointY = graphPanel.Height / 2;
 
             //Размечаем ось Х,Y
             if (scaleBar.Value > 15)
@@ -126,22 +129,27 @@ namespace PCI_lab_3
                 y2 = f(x2);
                 x2 = graphPanel.Width - (mark - x2) * scale;
                 y2 = (graphPanel.Height / 2) - y2 * scale;
-                graphics.DrawLine(colorGraphic, (float)x1, (float)y1, (float)x2, (float)y2);
+                if (y1>-1000&&y2>-1000)
+                {
+                    graphics.DrawLine(colorGraphic, (float)x1, (float)y1, (float)x2, (float)y2);
+                }
             }
+
+            graphics.DrawLine(HuiColor, (float)(graphPanel.Width - (mark - hui) * scale), 0, (float)(graphPanel.Width - (mark - hui) * scale), graphPanel.Height);
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             //Изменение масштаба
-            trackBarLabelCurrent.Text = "("+((-graphPanel.Width / 2) / scaleBar.Value).ToString() + " ; " + ((graphPanel.Width / 2) / scaleBar.Value).ToString()+")";
             scaleBar.TickFrequency = 5;
-            drawGraphic(scaleBar.Value);
-
+            int scale = scaleBar.Value;
+            trackBarLabelCurrent.Text = "(" + ((-graphPanel.Width / 2) / scale).ToString() + " ; " + ((graphPanel.Width / 2) / scale).ToString() + ")";
+            drawGraphic(scale, 0);
         }
 
         private void graphPanel_Paint(object sender, PaintEventArgs e)
         {
-            drawGraphic(scaleBar.Value);
+            drawGraphic(scaleBar.Value, 0);
         }
 
         private void parseSettings()
@@ -183,7 +191,7 @@ namespace PCI_lab_3
             if (sf.ShowDialog() == DialogResult.OK)
             {
                 parseSettings();
-                drawGraphic(scaleBar.Value);
+                drawGraphic(scaleBar.Value, 0);
             }
         }
 
@@ -193,15 +201,15 @@ namespace PCI_lab_3
             switch (comboBox1.SelectedIndex)
             {
                 case 0:
-                        return x - Math.Sqrt(9 + x) + x * x - 4;
+                    return x - Math.Sqrt(9 + x) + x * x - 4;
                 case 1:
-                        return 0.1 * x * x - x * Math.Log(x);
+                    return 0.1 * x * x - x * Math.Log(x);
                 case 2:
-                        return Math.Pow(x, 4) - 26 * Math.Pow(x, 3) + 131 * x * x - 226 * x + 120;
+                    return Math.Pow(x, 4) - 26 * Math.Pow(x, 3) + 131 * x * x - 226 * x + 120;
                 case 3:
-                        return Math.Pow(x, 4) - 0.486 * Math.Pow(x, 3) - 5.792 * x * x - 0.486 * x + 4.792;
+                    return Math.Pow(x, 4) - 0.486 * Math.Pow(x, 3) - 5.792 * x * x - 0.486 * x + 4.792;
                 case 4:
-                        return 0.1 * Math.Sin(x) + 3 * x - 1;
+                    return 0.1 * Math.Sin(x) + 3 * x - 1;
                 default:
                     return 0;
 
@@ -211,13 +219,21 @@ namespace PCI_lab_3
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             interval_value();
-            drawGraphic(scaleBar.Value);
-            
+            getAnswer();
+            drawGraphic(scaleBar.Value, 0);
+
         }
 
         private void trackBar1_Scroll_1(object sender, EventArgs e)
         {
             label5.Text = Convert.ToString(trackBar1.Value / 1000.0);
+            if (checkInterval())
+                getAnswer();
+
+        }
+
+        private void getAnswer()
+        {
             switch (GetRadioIndex(groupBox1))
             {
                 case 0: label6.Text = "Значение корня равно:" + Convert.ToString(dix());
@@ -227,7 +243,6 @@ namespace PCI_lab_3
                 case 2: label6.Text = "Значение корня равно:" + Convert.ToString(hord());
                     break;
             }
-
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -256,13 +271,18 @@ namespace PCI_lab_3
             while (Math.Abs(b - a) > eps)
             {
                 c = (a + b) / 2;
-
+                if (checkBox1.Checked)
+                {
+                    drawGraphic(scaleBar.Value, c);
+                    Thread.Sleep(300);
+                }
                 if (f(b) * f(c) < 0)
                     a = c;
                 else
                     b = c;
                 n++;
             }
+            checkBox1.Checked = false;
             return (a + b) / 2;
 
         }
@@ -281,10 +301,15 @@ namespace PCI_lab_3
                 n++;
                 y = xN;
                 xN = x2 - ((x2 - x1) / (f(x2) - f(x1))) * f(x2);
+                if (checkBox1.Checked)
+                {
+                    drawGraphic(scaleBar.Value, xN);
+                    Thread.Sleep(300);
+                }
                 x1 = x2;
                 x2 = xN;
             } while (Math.Abs(y - xN) >= E);
-
+            checkBox1.Checked = false;
             return xN + 0.000678;
         }
         private double hord()
@@ -300,28 +325,43 @@ namespace PCI_lab_3
             {
                 a = b - (b - a) * f(b) / (f(b) - f(a));
                 b = a - (a - b) * f(a) / (f(a) - f(b));
+                if (checkBox1.Checked)
+                {
+                    drawGraphic(scaleBar.Value, b);
+                    Thread.Sleep(300);
+                }
                 n++;
             }
-
+            checkBox1.Checked = false;
             return b;
         }
 
-        private void checkInterval()
+        private bool checkInterval()
         {
             if (Convert.ToDouble(textBox1.Text) <= Convert.ToDouble(textBox2.Text))
             {
                 if (f(Convert.ToDouble(textBox1.Text)) * f(Convert.ToDouble(textBox2.Text)) > 0)
-                   MessageBox.Show("Вы ввели интервал на котором нет корней", "Некорректный ввод данных", MessageBoxButtons.OK, MessageBoxIcon.Information);  
+                {
+                    MessageBox.Show("Вы ввели интервал на котором нет корней", "Некорректный ввод данных", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    interval_value();
+                    return false;
+                }
+                return true;
             }
             else
+            {
                 MessageBox.Show("Левое значение интервала больше правого", "Неккоректный ввод данных", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                interval_value();
+                return false;
+            }
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButton1.Checked) {
-                checkInterval();
-                label6.Text = "Значение корня равно:" + Convert.ToString(dix());
+            if (radioButton1.Checked)
+            {
+                if (checkInterval())
+                    label6.Text = "Значение корня равно:" + Convert.ToString(dix());
             }
         }
 
@@ -329,8 +369,8 @@ namespace PCI_lab_3
         {
             if (radioButton2.Checked)
             {
-                checkInterval();
-                label6.Text = "Значение корня равно:" + Convert.ToString(hord());
+                if (checkInterval())
+                    label6.Text = "Значение корня равно:" + Convert.ToString(hord());
             }
         }
 
@@ -338,8 +378,8 @@ namespace PCI_lab_3
         {
             if (radioButton3.Checked)
             {
-                checkInterval();
-                label6.Text = "Значение корня равно :" + Convert.ToString(newton());
+                if (checkInterval())
+                    label6.Text = "Значение корня равно :" + Convert.ToString(newton());
             }
         }
 
@@ -352,7 +392,28 @@ namespace PCI_lab_3
             return -1;
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (checkInterval())
+                getAnswer();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            interval_value();
+            trackBar1.Value = 100;
+            comboBox1.SelectedIndex = 0;
+            radioButton1.Select();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            checkInterval();
+            getAnswer();
+        }
+
     }
 
-        
+
 }
