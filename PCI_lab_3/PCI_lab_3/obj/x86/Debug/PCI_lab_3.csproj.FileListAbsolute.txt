@@ -1,13 +1,39 @@
-C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\bin\Debug\PCI_lab_3.exe
-C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\bin\Debug\PCI_lab_3.pdb
-C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.Form1.resources
-C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.Properties.Resources.resources
-C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\GenerateResource.read.1.tlog
-C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\PeoneEr\AppData\Local\Temporary Projects\PCI_lab_3\bin\Debug\PCI_lab_3.exe
+C:\Users\PeoneEr\AppData\Local\Temporary Projects\PCI_lab_3\bin\Debug\PCI_lab_3.pdb
+C:\Users\PeoneEr\AppData\Local\Temporary Projects\PCI_lab_3\obj\x86\Debug\PCI_lab_3.Form1.resources
+C:\Users\PeoneEr\AppData\Local\Temporary Projects\PCI_lab_3\obj\x86\Debug\PCI_lab_3.Properties.Resources.resources
+C:\Users\PeoneEr\AppData\Local\Temporary Projects\PCI_lab_3\obj\x86\Debug\PCI_lab_3.csproj.GenerateResource.Cache
+C:\Users\PeoneEr\AppData\Local\Temporary Projects\PCI_lab_3\obj\x86\Debug\PCI_lab_3.exe
+C:\Users\PeoneEr\AppData\Local\Temporary Projects\PCI_lab_3\obj\x86\Debug\PCI_lab_3.pdb
 C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.exe
 C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.pdb
-C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.Form2.resources
-C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.Form3.resources
+C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\bin\Debug\PCI_lab_3.exe
+C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\bin\Debug\PCI_lab_3.pdb
+C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.Properties.Resources.resources
+C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.csproj.GenerateResource.Cache
 F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.exe
 F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.pdb
+F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\bin\Debug\PCI_lab_3.exe
+F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\bin\Debug\PCI_lab_3.pdb
+F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.Properties.Resources.resources
+F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\GenerateResource.read.1.tlog
+F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.graphicForm.resources
+C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.settingsForm.resources
+F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.graphicForm.resources
+F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.settingsForm.resources
+F:\GitHub\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.confirmForm.resources
+C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.confirmForm.resources
+C:\Sites\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.csprojResolveAssemblyReference.cache
+Z:\home\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.exe
+Z:\home\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.pdb
+Z:\home\group-work-\PCI_lab_3\PCI_lab_3\bin\Debug\PCI_lab_3.exe
+Z:\home\group-work-\PCI_lab_3\PCI_lab_3\bin\Debug\PCI_lab_3.pdb
+Z:\home\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\ResolveAssemblyReference.cache
+Z:\home\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.confirmForm.resources
+Z:\home\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.graphicForm.resources
+Z:\home\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.Properties.Resources.resources
+Z:\home\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\PCI_lab_3.settingsForm.resources
+Z:\home\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\GenerateResource.read.1.tlog
+Z:\home\group-work-\PCI_lab_3\PCI_lab_3\obj\x86\Debug\GenerateResource.write.1.tlog
