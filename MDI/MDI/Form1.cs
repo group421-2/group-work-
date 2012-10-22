@@ -221,6 +221,101 @@ namespace MDI
             this.toolStripButton10_Click(this, e);
         }
 
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            Form3 newMDIChild = new Form3();
+            // Set the Parent Form of the Child window.
+            newMDIChild.MdiParent = this;
+            // Display the new form.
+            newMDIChild.Show();
+            toolStrip2.Visible = true;
+        }
+
+        private void toolStripButton14_Click(object sender, EventArgs e)
+        {
+
+            Form active = this.ActiveMdiChild;
+            Panel pb = (Panel)active.Controls["panel1"];
+            pb.BackColor = Color.Red;
+        }
+
+        private void toolStripButton15_Click(object sender, EventArgs e)
+        {
+            Form active = this.ActiveMdiChild;
+            Panel pb = (Panel)active.Controls["panel1"];
+            pb.BackColor = Color.Blue;
+        }
+
+        private void toolStripButton16_Click(object sender, EventArgs e)
+        {
+            Form active = this.ActiveMdiChild;
+            Panel pb = (Panel)active.Controls["panel1"];
+            pb.BackColor = Color.Green;
+        }
+
+        private void toolStripButton17_Click(object sender, EventArgs e)
+        {
+            Form active = this.ActiveMdiChild;
+            Panel pb = (Panel)active.Controls["panel1"];
+            pb.BackColor = Color.Yellow;
+        }
+
+        private void toolStripButton18_Click(object sender, EventArgs e)
+        {
+            Form active = this.ActiveMdiChild;
+            Panel pb = (Panel)active.Controls["panel1"];
+            pb.BackColor = Color.Black;
+        }
+
+        private void toolStripButton19_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Form active = this.ActiveMdiChild;
+                Panel pb = (Panel)active.Controls["panel1"];
+                pb.BackColor = colorDialog1.Color;
+            }
+        }
+
+        private void toolStripButton11_Click(object sender, EventArgs e)
+        {
+            toolStripMenuItem4_Click(this, e);
+        }
+
+        private void toolStripButton12_Click(object sender, EventArgs e)
+        {
+            Form activeChild = this.ActiveMdiChild;
+            PictureBox theBox = (PictureBox)activeChild.Controls["pictureBox1"];
+            if (openFileDialog2.ShowDialog() == DialogResult.OK)
+            {
+                theBox.Image = new Bitmap(@openFileDialog2.FileName);
+                activeChild.Text = openFileDialog2.FileName;
+            }
+            else
+            {
+                activeChild.Close();
+            }
+        }
+
+        private void открытьКартинкуToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.toolStripMenuItem4_Click(this, e);
+            this.toolStripButton12_Click(this, e);
+        }
+
+        private void toolStripButton13_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog2.ShowDialog() == DialogResult.OK)
+            {
+                Form activeChild = this.ActiveMdiChild;
+                PictureBox theBox = (PictureBox)activeChild.Controls["pictureBox1"];
+                Bitmap drawing = new Bitmap(theBox.Width, theBox.Height);
+                theBox.DrawToBitmap(drawing, theBox.ClientRectangle);
+                drawing.Save(openFileDialog2.FileName);
+                //theBox.
+            }
+        }
+
 
 
     }

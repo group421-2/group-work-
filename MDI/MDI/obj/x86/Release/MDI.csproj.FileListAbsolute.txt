@@ -6,3 +6,12 @@ C:\Users\PeoneEr\AppData\Local\Temporary Projects\MDI\bin\Release\MDI.exe
 C:\Users\PeoneEr\AppData\Local\Temporary Projects\MDI\bin\Release\MDI.pdb
 C:\Users\PeoneEr\AppData\Local\Temporary Projects\MDI\obj\x86\Release\MDI.exe
 C:\Users\PeoneEr\AppData\Local\Temporary Projects\MDI\obj\x86\Release\MDI.pdb
+C:\Sites\group-work-\MDI\MDI\obj\x86\Release\MDI.MDIParentForm.resources
+C:\Sites\group-work-\MDI\MDI\obj\x86\Release\MDI.MDITextForm.resources
+C:\Sites\group-work-\MDI\MDI\obj\x86\Release\MDI.Form3.resources
+C:\Sites\group-work-\MDI\MDI\obj\x86\Release\MDI.Properties.Resources.resources
+C:\Sites\group-work-\MDI\MDI\obj\x86\Release\MDI.csproj.GenerateResource.Cache
+C:\Sites\group-work-\MDI\MDI\obj\x86\Release\MDI.exe
+C:\Sites\group-work-\MDI\MDI\bin\Release\MDI.exe
+C:\Sites\group-work-\MDI\MDI\bin\Release\MDI.pdb
+C:\Sites\group-work-\MDI\MDI\obj\x86\Release\MDI.pdb

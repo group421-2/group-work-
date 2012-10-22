@@ -14,3 +14,4 @@ C:\Sites\group-work-\MDI\MDI\obj\x86\Debug\MDI.MDIParentForm.resources
 C:\Sites\group-work-\MDI\MDI\obj\x86\Debug\MDI.MDITextForm.resources
 C:\Sites\group-work-\MDI\MDI\obj\x86\Debug\MDI.Properties.Resources.resources
 C:\Sites\group-work-\MDI\MDI\obj\x86\Debug\MDI.csproj.GenerateResource.Cache
+C:\Sites\group-work-\MDI\MDI\obj\x86\Debug\MDI.Form3.resources
