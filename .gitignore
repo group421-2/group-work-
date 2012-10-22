@@ -5,16 +5,16 @@
 *.o
 
 # Compiled Dynamic libraries
--*.so
--# Compiled Static libraries
--*.lai
--*.la
--*.a
--PCI_lab_3/PCI_lab_3/bin/
--PCI_lab_3/PCI_lab_3/obj/
--*.exe
--*.pdb
--*.manifest
--*.txt
--*.resources
--*.Cache
+*.so
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+PCI_lab_3/PCI_lab_3/bin/
+PCI_lab_3/PCI_lab_3/obj/
+*.exe
+*.pdb
+*.manifest
+*.txt
+*.resources
+*.Cache
