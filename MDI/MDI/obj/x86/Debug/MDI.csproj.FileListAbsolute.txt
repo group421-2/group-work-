@@ -1,0 +1,10 @@
+C:\Users\PeoneEr\AppData\Local\Temporary Projects\MDI\bin\Debug\MDI.exe
+C:\Users\PeoneEr\AppData\Local\Temporary Projects\MDI\bin\Debug\MDI.pdb
+C:\Users\PeoneEr\AppData\Local\Temporary Projects\MDI\obj\x86\Debug\MDI.Properties.Resources.resources
+C:\Users\PeoneEr\AppData\Local\Temporary Projects\MDI\obj\x86\Debug\MDI.csproj.GenerateResource.Cache
+C:\Users\PeoneEr\AppData\Local\Temporary Projects\MDI\obj\x86\Debug\MDI.exe
+C:\Users\PeoneEr\AppData\Local\Temporary Projects\MDI\obj\x86\Debug\MDI.pdb
+C:\Users\PeoneEr\AppData\Local\Temporary Projects\MDI\obj\x86\Debug\MDI.MDIParentForm.resources
+C:\Users\PeoneEr\AppData\Local\Temporary Projects\MDI\obj\x86\Debug\MDI.MDITextForm.resources
+C:\Sites\group-work-\MDI\MDI\obj\x86\Debug\MDI.exe
+C:\Sites\group-work-\MDI\MDI\obj\x86\Debug\MDI.pdb
