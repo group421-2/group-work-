@@ -8,3 +8,9 @@ C:\Users\PeoneEr\AppData\Local\Temporary Projects\MDI\obj\x86\Debug\MDI.MDIParen
 C:\Users\PeoneEr\AppData\Local\Temporary Projects\MDI\obj\x86\Debug\MDI.MDITextForm.resources
 C:\Sites\group-work-\MDI\MDI\obj\x86\Debug\MDI.exe
 C:\Sites\group-work-\MDI\MDI\obj\x86\Debug\MDI.pdb
+C:\Sites\group-work-\MDI\MDI\bin\Debug\MDI.exe
+C:\Sites\group-work-\MDI\MDI\bin\Debug\MDI.pdb
+C:\Sites\group-work-\MDI\MDI\obj\x86\Debug\MDI.MDIParentForm.resources
+C:\Sites\group-work-\MDI\MDI\obj\x86\Debug\MDI.MDITextForm.resources
+C:\Sites\group-work-\MDI\MDI\obj\x86\Debug\MDI.Properties.Resources.resources
+C:\Sites\group-work-\MDI\MDI\obj\x86\Debug\MDI.csproj.GenerateResource.Cache

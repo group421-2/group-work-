@@ -19,6 +19,9 @@ namespace MDI
 
         private static float fontSize;
 
+        /**
+         * Начало меню
+         */
         private void createTextToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MDITextForm newMDIChild = new MDITextForm();
@@ -29,6 +32,9 @@ namespace MDI
             toolStrip1.Visible = true;
         }
 
+        /**
+         * Выбор стиля текста - жирный
+         */
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             Form activeChild = this.ActiveMdiChild;
@@ -46,6 +52,9 @@ namespace MDI
             
         }
 
+        /**
+         * Выбор стиля текста - курсив
+         */
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             Form activeChild = this.ActiveMdiChild;
@@ -62,6 +71,10 @@ namespace MDI
             }
         }
 
+
+        /**
+         * Выбор стиля текста - подчеркнутый
+         */
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
             Form activeChild = this.ActiveMdiChild;
@@ -78,6 +91,9 @@ namespace MDI
             }
         }
 
+        /**
+         * Размер текста
+         */
         private void toolStripComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             fontSize = (float)Convert.ToDouble(toolStripComboBox1.Text);
@@ -88,6 +104,9 @@ namespace MDI
             //theBox.SelectionAlignment=HorizontalAlignment.
         }
 
+        /**
+         * Выравнивание по левому краю
+         */
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
             Form activeChild = this.ActiveMdiChild;
@@ -106,6 +125,10 @@ namespace MDI
             }
         }
 
+
+        /**
+         * Выравнивание по центру
+         */
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
             Form activeChild = this.ActiveMdiChild;
@@ -124,6 +147,9 @@ namespace MDI
             }
         }
 
+        /**
+         * Выравнивание по правому краю
+         */
         private void toolStripButton6_Click(object sender, EventArgs e)
             {
             Form activeChild = this.ActiveMdiChild;
@@ -142,6 +168,9 @@ namespace MDI
             }
         }
 
+        /**
+         * Цвет текста
+         */
         private void toolStripButton7_Click(object sender, EventArgs e)
         {
             Form activeChild = this.ActiveMdiChild;
@@ -152,6 +181,9 @@ namespace MDI
             }
         }
 
+        /**
+         * Сохранить файл
+         */
         private void toolStripButton8_Click(object sender, EventArgs e)
         {
             
@@ -165,22 +197,30 @@ namespace MDI
            
         }
 
+        /**
+         * Открыть файл
+         */
         private void toolStripButton10_Click(object sender, EventArgs e)
         {
+            Form activeChild = this.ActiveMdiChild;
+            RichTextBox theBox = (RichTextBox)activeChild.ActiveControl;
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                Form activeChild = this.ActiveMdiChild;
-                RichTextBox theBox = (RichTextBox)activeChild.ActiveControl;
                 theBox.LoadFile(openFileDialog1.FileName, RichTextBoxStreamType.PlainText);
                 activeChild.Text = openFileDialog1.FileName;
             }
+            else
+            {
+                activeChild.Close();
+            }
         }
 
-        private void открытьБраззерсToolStripMenuItem_Click(object sender, EventArgs e)
+        private void openTextFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.createTextToolStripMenuItem_Click(this, e);
             this.toolStripButton10_Click(this, e);
         }
+
 
 
     }
